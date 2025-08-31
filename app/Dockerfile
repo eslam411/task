@@ -9,14 +9,14 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Copy only requirements first to leverage Docker layer caching
-COPY requirements.txt .
+COPY app/requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
-COPY app ./app
-COPY run.py .
+COPY app/app ./app
+COPY app/run.py .
 
 # Expose Flask port
 EXPOSE 5000
