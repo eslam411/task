@@ -9,7 +9,7 @@ pool: personal-devices
 variables:
   imageRepository: 'microservicedemo'
   containerRegistry: 'pwcacr12345unique.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
 
 stages:
